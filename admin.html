@@ -1,0 +1,98 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="admin.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <title>MealPlann</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+  <style>
+      body{
+          background-color: #352e3e;
+      }
+      .jumbotron{
+            background-color:#352e3e;
+;
+            color:white;
+        }       
+  
+
+  </style>
+  <body>
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img src="pics/logo.png" alt="">
+              </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="meal.html">My Meal</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+                    <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="input-group mb-3">
+            <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">Meal Name</span>
+                  </div>
+            <input type="text" class="form-control" placeholder="Meal Name" aria-describedby="basic-addon2" id="mealName">               
+          </div>                    <br>
+          
+          <div class="input-group mb-3">
+                <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">Picture</span>
+                      </div>
+                <input type="file" class="form-control" placeholder="Picture aria-describedby="basic-addon2" id="mealPic">               
+              </div>                    <br>
+          
+              <div class="input-group mb-3">
+                    <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Description/Recipe</span>
+                          </div>
+                    <input type="text" class="form-control" placeholder="Description" aria-describedby="basic-addon2" id="lName">               
+                  </div>                    <br>
+
+                  <button type="button" class="btn-lg btn-secondary" style="width:100%" onclick="saveUser()">Register</button>
+                  
+                                       
+
+
+    <!-- Optional JavaScript -->
+  </body>
+</html>

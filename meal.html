@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="meal.js"></script>
+    <script src="login.js"></script>
+    <script src="js/js.cookie.js"></script>
+      <script>
+          window.onload = function () {
+            savePreSetPlans()
+              displayMeal();          
+          }
+
+      </script>
+    <title>Your Meal!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+  <style>
+      body{
+          background-color: #352e3e;
+      }
+      .jumbotron{
+            background-color:#352e3e;
+
+            color:white;
+        }
+        .row {
+  max-height:300px;
+  overflow:hidden;
+}
+
+.card-text{
+  color: slategray
+}
+.card-title{
+  color: slategray
+}
+.card-header{
+  color:#352e3e
+}
+.card-img-top{
+   width: auto;
+    height: 300px;
+    object-fit: cover;
+}
+  
+
+  </style>
+  <body action="generateMeal()">
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                  <img src="pics/logo.png" alt="">
+                </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="meal.html">My Meal</a>
+                    </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                      <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+          <h2 style="color: beige"> Here is your daily meal plan! Enjoy!</h2>
+
+            <div class="card-deck">
+              <div class="card">
+                <h3 class="card-header">Breakfast</h3>
+                <img class="card-img-top" src="pics/placeholder.jpg" alt="Card image cap" id="breakfast">
+                <div class="card-body">
+                  <h5 class="card-title"id="title_breakfast">Breakfast</h5>
+                  <p class="card-text" id="desc_breakfast">You don't have a meal set, or you are not logged in, please try again!</p>
+
+                </div>
+              </div>
+              <div class="card">                
+                  <h3 class="card-header">Lunch</h3>
+                  <img class="card-img-top" src="pics/placeholder.jpg" alt="Card image cap" id="lunch">
+                  <div class="card-body">
+                  <h5 class="card-title"id="title_lunch">Lunch</h5>
+                  <p class="card-text"id="desc_lunch">You don't have a meal set, or you are not logged in, please try again!</p>
+              
+                </div>
+              </div>
+              <div class="card">
+                
+                  <h3 class="card-header">Snack 1</h3>
+                  <img class="card-img-top" src="pics/placeholder.jpg" alt="Card image cap" id="snack1">
+                  <div class="card-body">
+                  <h5 class="card-title"id="title_snack1">Snack1</h5>
+                  <p class="card-text"id="desc_snack1">You don't have a meal set, or you are not logged in, please try again!</p>
+                </div>
+              </div>
+              <div class="card">
+                
+                  <h3 class="card-header">Dinner</h3>
+                  <img class="card-img-top" src="pics/placeholder.jpg" alt="Card image cap" id="dinner">
+                  <div class="card-body">
+                    <h5 class="card-title"id="title_dinner">Dinner</h5>
+                    <p class="card-text"id="desc_dinner">You don't have a meal set, or you are not logged in, please try again!</p>
+                  </div>
+                </div>
+                
+              <div class="card">
+                
+                  <h3 class="card-header">Snack 2</h3>
+                  <img class="card-img-top" src="pics/placeholder.jpg" alt="Card image cap" id="snack2">
+                  <div class="card-body">
+                    <h5 class="card-title"id="title_snack2">Snack2</h5>
+                    <p class="card-text"id="desc_snack2">You don't have a meal set, or you are not logged in, please try again!</p>
+                  </div>
+                </div>
+              </div><br>
+              <button type="button" class="btn-lg btn-secondary" style="width:100%" onclick="saveMeal()">Click here to save your meal!</button>
+
+              </div>
+            </div>
+            
+      </div>
+
+              
+
+ </body>
+</html>
