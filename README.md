@@ -1,11 +1,11 @@
 # Meal-Plann
-<h2>Website project to create a meal planner platform<h2/>
+<h2>Website project to create a meal planner platform</h2>
 <hr/>
 
 Project developed for a Internet Programming I class, following the directions below:
 
 
-<h3>Project Description<h3/>
+<h3>Project Description</h3>
 
 
 Web Site Title : Easy Meal Planner
